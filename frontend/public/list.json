@@ -1,0 +1,41 @@
+[
+    {
+        "id":1,
+        "name":"Story Book",
+        "title":"lorem lorem lorem",
+        "price":0,
+        "category":"Free",
+        "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books_23-2149334860.jpg?t=st=1735120172~exp=1735123772~hmac=9cc91b8610d9d08b7a42e7e659afcc4420377e29aabb9677266eb9da37812c3e&w=740"
+    },
+    {
+        "id":4,
+        "name":"Story Book",
+        "title":"lorem lorem lorem",
+        "price":0,
+        "category":"Free",
+        "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books_23-2149334860.jpg?t=st=1735120172~exp=1735123772~hmac=9cc91b8610d9d08b7a42e7e659afcc4420377e29aabb9677266eb9da37812c3e&w=740"
+    },{
+        "id":5,
+        "name":"Story Book",
+        "title":"lorem lorem lorem",
+        "price":0,
+        "category":"Free",
+        "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books_23-2149334860.jpg?t=st=1735120172~exp=1735123772~hmac=9cc91b8610d9d08b7a42e7e659afcc4420377e29aabb9677266eb9da37812c3e&w=740"
+    },
+    {
+        "id":2,
+        "name":"Comedy Book",
+        "title":"lorem lorem lorem",
+        "price":40,
+        "category":"comedy",
+        "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books_23-2149334860.jpg?t=st=1735120172~exp=1735123772~hmac=9cc91b8610d9d08b7a42e7e659afcc4420377e29aabb9677266eb9da37812c3e&w=740"
+    },
+    {
+        "id":3,
+        "name":"Sports Book",
+        "title":"lorem lorem lorem",
+        "price":50,
+        "category":"sports",
+        "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books_23-2149334860.jpg?t=st=1735120172~exp=1735123772~hmac=9cc91b8610d9d08b7a42e7e659afcc4420377e29aabb9677266eb9da37812c3e&w=740"
+    }
+]
