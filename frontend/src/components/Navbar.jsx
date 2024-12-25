@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Navbar = () => {
   const NavItems = (
@@ -17,10 +17,30 @@ const Navbar = () => {
       </li>
     </>
   );
+  const [colorChange, setColorChange] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setColorChange(true);
+      } else {
+        setColorChange(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
-      <div className="max-w-screen-2xl container mx-auto md:px-20 px-4">
-        <div className="navbar bg-base-100">
+      <div
+        className={`max-w-screen-2xl container mx-auto md:px-20 px-4 fixed left-0 right-0 top-0 ${
+          colorChange
+            ? "sticky-navbar shadow-md bg-base-200 duration-300 transition-all ease-in-out"
+            : ""
+        }`}
+      >
+        <div className="navbar">
           <div className="navbar-start">
             <div className="dropdown">
               <div
@@ -58,7 +78,11 @@ const Navbar = () => {
             </div>
             <div className="hidden md:block">
               <label className="px-3 py-2 border rounded-md flex items-center gap-2">
-                <input type="text" className="grow outline-none" placeholder="Search" />
+                <input
+                  type="text"
+                  className="grow outline-none"
+                  placeholder="Search"
+                />
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"
