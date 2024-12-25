@@ -5,10 +5,10 @@ import Course from "../components/Course";
 
 const Courses = () => {
   return (
-    <> 
+    <>
       <Navbar />
       <div className="min-h-screen  dark:bg-slate-900 dark:text-white dark:border">
-        <Course/>
+        <Course />
       </div>
 
       <Footer />

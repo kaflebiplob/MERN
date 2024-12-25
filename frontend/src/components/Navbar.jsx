@@ -98,7 +98,6 @@ const Navbar = () => {
                   type="text"
                   className="grow outline-none  dark:bg-slate-900 dark:text-white"
                   placeholder="Search"
-                  
                 />
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
