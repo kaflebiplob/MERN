@@ -1,5 +1,5 @@
 import React from "react";
-import banner from "../../public/banner.jpg";
+
 
 const Banner = () => {
   return (
@@ -32,7 +32,7 @@ const Banner = () => {
           <button className="btn btn-secondary mt-6">Secondary</button>
         </div>
         <div className="w-full md:w-1/2 order-1">
-          <img src={banner} className=" w-88 h-88 md:w-92 h-92" alt="" />
+          <img src="/banner.jpg" className="w-88 h-88 md:w-92 h-92" alt="" />
         </div>
       </div>
     </>

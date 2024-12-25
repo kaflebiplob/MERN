@@ -5,7 +5,7 @@ const Footer = () => {
     <>
     <hr className="mt-10"/>
       <div>
-        <footer className="footer footer-center text-base-content rounded p-10 ">
+        <footer className="footer footer-center text-base-content rounded p-10  dark:bg-slate-900 dark:text-white dark:border ">
           <nav className="grid grid-flow-col gap-4">
             <a className="link link-hover">About us</a>
             <a className="link link-hover">Contact</a>
@@ -52,7 +52,7 @@ const Footer = () => {
           <aside>
             <p>
               Copyright © {new Date().getFullYear()} - All right reserved by
-              ACME Industries Ltd
+              Bstore private limited
             </p>
           </aside>
         </footer>
