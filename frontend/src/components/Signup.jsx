@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Login from "./Login";
 import { useForm } from "react-hook-form";
+import axios from "axios"
 
 const Signup = () => {
   const {
@@ -9,7 +10,26 @@ const Signup = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (data) => {
+    const userInfo = {
+      fullname: data.fullname,
+      email: data.email,
+      password: data.password,
+    };
+    await axios
+      .post("http://localhost:4001/user/signup", userInfo)
+      .then((res) => {
+        console.log(res.data);
+        if (res.data) {
+          alert("signup succesful");
+        }
+        localStorage.setItem("Users",JSON.stringify(res.data))
+      })
+      .catch((err) => {
+        console.log(err);
+        alert("signup failed",err);
+      });
+  };
   return (
     <>
       <div className="flex h-screen items-center justify-center">
@@ -30,7 +50,7 @@ const Signup = () => {
                   type="name"
                   placeholder="enter your name"
                   className="w-80 px-3 border rounded-md outline-none"
-                  {...register("name", { required: true })}
+                  {...register("fullname", { required: true })}
                 />
                 <br />
                 {errors.name && (
