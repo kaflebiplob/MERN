@@ -1,5 +1,5 @@
 {
-  "name": "bstore",
+  "name": "backend",
   "version": "1.0.0",
   "description": "mern project",
   "main": "index.js",
@@ -11,14 +11,14 @@
     "type": "git",
     "url": "git+https://github.com/kaflebiplob/MERN.git"
   },
-  "author": "Biplob",
+  "author": "biplob",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/kaflebiplob/MERN/issues"
   },
   "homepage": "https://github.com/kaflebiplob/MERN#readme",
   "dependencies": {
-    "bstore": "file:",
+    "backend": "file:",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "nodemon": "^3.1.9"
