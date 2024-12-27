@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Cards from "./Cards";
-import list from "../../public/list.json"
+import axios from "axios";
 
 const Course = () => {
+  const [book, setBook] = useState([]);
+  useEffect(() => {
+    const getBook = async () => {
+      try {
+        const response = await axios.get("http://localhost:4001/book");
+        console.log(response.data);
+        setBook(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getBook();
+  }, []);
   return (
     <>
       <div className="`max-w-screen-2xl container mx-auto md:px-20 px-4">
@@ -17,16 +30,17 @@ const Course = () => {
             inventore asperiores earum quos, repellendus soluta. Modi eveniet
             eos culpa incidunt fuga.
           </p>
-        <a href="/">  <button className="btn btn-secondary mt-4 px-2 py-4 rounded-md hover:bg-pink-700 hover:uration-300">
-            back
-          </button></a>
+          <a href="/">
+            {" "}
+            <button className="btn btn-secondary mt-4 px-2 py-4 rounded-md hover:bg-pink-700 hover:uration-300">
+              back
+            </button>
+          </a>
         </div>
         <div className="mt-12 grid grid-cols-1  md:grid-cols-4">
-            {
-                list.map((item)=>(
-                 <Cards key={item.id} item={item}/>
-                ))
-            }
+          {book.map((item) => (
+            <Cards key={item.id} item={item} />
+          ))}
         </div>
       </div>
     </>
