@@ -1,0 +1,22 @@
+{
+  "name": "bstore",
+  "version": "1.0.0",
+  "description": "mern project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaflebiplob/MERN.git"
+  },
+  "author": "Biplob",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaflebiplob/MERN/issues"
+  },
+  "homepage": "https://github.com/kaflebiplob/MERN#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
