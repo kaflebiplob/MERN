@@ -20,12 +20,18 @@ const Login = () => {
         console.log(res.data);
         if (res.data) {
           toast.success("logged in succesfully");
+          document.getElementById("my_modal_3").close();
+          setTimeout(()=>{
+
+            window.location.reload();
+          },1000)
         }
         localStorage.setItem("Users", JSON.stringify(res.data.user));
       })
       .catch((err) => {
         console.log(err);
         toast.error(err.response.data.message);
+        setTimeout(()=>{},3000)
       });
   };
   return (
