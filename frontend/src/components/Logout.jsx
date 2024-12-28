@@ -9,7 +9,7 @@ const Logout = () => {
       setAuthUser({ ...authUser, user: null });
       localStorage.removeItem("Users");
       toast.success("Logout Succesfull");
-     
+
       setTimeout(() => {
         window.location.reload();
       }, 1000);

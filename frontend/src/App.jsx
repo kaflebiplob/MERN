@@ -6,9 +6,8 @@ import Signup from "./components/Signup";
 import { Toaster } from "react-hot-toast";
 import { useAuth } from "./context/AuthProvider";
 
-
 export default function App() {
-  const [authUser, setAuthuser] = useAuth()
+  const [authUser, setAuthuser] = useAuth();
   console.log(authUser);
   return (
     <>
