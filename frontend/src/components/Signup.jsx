@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Login from "./Login";
 import { useForm } from "react-hook-form";
-import axios from "axios"
-
+import axios from "axios";
+import toast from "react-hot-toast";
 const Signup = () => {
   const {
     register,
@@ -21,13 +21,13 @@ const Signup = () => {
       .then((res) => {
         console.log(res.data);
         if (res.data) {
-          alert("signup succesful");
+          toast.success("Signup Succesful");
         }
-        localStorage.setItem("Users",JSON.stringify(res.data))
+        localStorage.setItem("Users", JSON.stringify(res.data));
       })
       .catch((err) => {
         console.log(err);
-        alert("signup failed",err);
+        toast.error("Signup failed" + err.response.data.message);
       });
   };
   return (
