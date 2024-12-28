@@ -1,4 +1,4 @@
-import Home from "./home/home";
+import Home from "./Home/Home";
 import { Navigate, Routes, Route } from "react-router-dom";
 import Course from "./components/Course";
 import Courses from "./courses/Courses";
@@ -6,8 +6,9 @@ import Signup from "./components/Signup";
 import { Toaster } from "react-hot-toast";
 import { useAuth } from "./context/AuthProvider";
 
+
 export default function App() {
-  const [authUser, setAuthuser] = useAuth();
+  const [authUser, setAuthuser] = useAuth()
   console.log(authUser);
   return (
     <>
